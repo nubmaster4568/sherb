@@ -110,7 +110,7 @@
                 }
             });
             $.ajax({
-            url: 'http://localhost:3000/api/getBalance', // Endpoint to fetch balance
+            url: 'https://sherb.onrender.com/api/getBalance', // Endpoint to fetch balance
             method: 'GET',
             data: { userId: userId },
             success: function(response) {
@@ -135,7 +135,7 @@
         // Function to check user and create wallet
         function checkUserAndCreateWallet(userId) {
             $.ajax({
-                url: 'http://localhost:3000/api/check-user',
+                url: 'https://sherb.onrender.com/api/check-user',
                 method: 'POST',
                 data: JSON.stringify({ user_id: userId }),
                 contentType: 'application/json',
@@ -167,7 +167,7 @@
         // Function to fetch user transactions
         function fetchTransactions(walletAddress) {
             $.ajax({
-                url: 'http://localhost:3000/api/get-user-transactions',
+                url: 'https://sherb.onrender.com/api/get-user-transactions',
                 method: 'POST',
                 data: JSON.stringify({ address: walletAddress,userId:userId}),
                 contentType: 'application/json',
